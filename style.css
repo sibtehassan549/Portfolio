@@ -233,17 +233,30 @@ html{
 /* Additional mobile adjustments */
 @media (max-width: 768px) {
   #home {
-      padding: 5% 10px; /* Increased padding for better spacing */
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 10px 5%; /* Top padding for fixed navbar */
   }
 
   #home-info {
-      padding-top: 3rem;
+      padding-top: 2rem;
       text-align: center;
-      margin: 0 auto; /* Center the content */
+      margin: 0 auto;
+      width: 100%;
+  }
+
+  #home-info .btn {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
+
+  #home-info .btn .icons {
+      margin-left: 0;
   }
 
   #home-img {
-      margin: 10px auto;
+      margin: 30px auto 10px;
       height: 18rem; /* Slightly smaller for mobile */
       width: 18rem;
   }
@@ -597,8 +610,8 @@ section {
 
 @media (max-width: 991px) {
   .navbar {
-    position: absolute; /* Change to absolute positioning */
-    background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent background */
+    position: fixed; /* Keep it fixed on mobile as well */
+    background-color: rgba(52, 58, 64, 0.95); /* Semi-transparent background */
   }
 
   .navbar-brand {
